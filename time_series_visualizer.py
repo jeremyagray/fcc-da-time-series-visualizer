@@ -87,7 +87,7 @@ def draw_bar_plot():
     )
     graph.despine(left=True)
     graph.set_axis_labels('Years', 'Average Page Views')
-    graph.legend.set_title('')
+    graph._legend.remove()
 
     # Define fig for return and testing.
     fig = graph.fig
