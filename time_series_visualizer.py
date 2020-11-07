@@ -4,8 +4,35 @@ import seaborn as sns
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 
-meses = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-mesitos = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+meses = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+]
+
+mesitos = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec'
+]
 
 # Tips for passing unit tests:
 #
@@ -23,9 +50,11 @@ dfo.set_index('date')
 
 # Remove the outlying 2.5% on each end for the cleaned data frame.
 dfc = dfo.copy()
-dfc = dfc.loc[(dfc['value'] >= dfc['value'].quantile(0.025)) & (dfc['value'] <= dfc['value'].quantile(0.975))]
+dfc = dfc.loc[(dfc['value'] >= dfc['value'].quantile(0.025))
+              & (dfc['value'] <= dfc['value'].quantile(0.975))]
 
 df = dfc.copy()
+
 
 def draw_line_plot():
     # Draw a matplotlib line plot.
@@ -42,6 +71,7 @@ def draw_line_plot():
 
     # Return the figure for testing.
     return fig
+
 
 def draw_bar_plot():
     # Massage data for monthly bar plot.
@@ -92,13 +122,14 @@ def draw_bar_plot():
     # Define fig for return and testing.
     fig = graph.fig
     # Call legend to make the legend active for testing.
-    ax = fig.axes[0].legend()
+    fig.axes[0].legend()
 
     # Save image.
     fig.savefig('bar_plot.png')
 
     # Return the figure for testing.
     return fig
+
 
 def draw_box_plot():
     # Goal is to draw two box and whisker plots, one showing page view
