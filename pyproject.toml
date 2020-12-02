@@ -1,13 +1,20 @@
 [tool]
+
 [tool.poetry]
+
 authors = ["Jeremy A Gray <jeremy.a.gray@gmail.com>"]
 description = "FCC DA Time Series Visualizer Project"
 name = "fcc-da-time-series-visualizer"
-version = "0.0.1"
+version = "0.1.0"
+
 [tool.poetry.dependencies]
+
 pandas = "^1.1"
-python = "^3.7"
+python = "^3.8"
 seaborn = "^0.11"
+
+[tool.poetry.dev-dependencies]
+
 pytest = "^6.1"
-pytest-flakes = "^4.0"
+pytest-cov = "^2.10"
 pytest-flake8 = "^1.0"
