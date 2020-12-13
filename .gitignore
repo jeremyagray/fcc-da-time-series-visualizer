@@ -2,9 +2,8 @@
 *~
 
 # Python.
-*.pyc
-__pycache__
-
-# Generated files.
-*.png
 !examples/*.png
+*.png
+.coverage
+__pycache__
+htmlcov

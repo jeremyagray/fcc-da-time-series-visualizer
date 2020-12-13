@@ -15,7 +15,7 @@ For each chart, make sure to use a copy of the data frame. Unit tests are writte
 
 For development, you can use `main.py` to test your functions. Click the "run" button and `main.py` will run.
 
-### Testing 
+### Testing
 
 We imported the tests from `test_module.py` to `main.py` for your convenience. The tests will run automatically whenever you hit the "run" button.
 
