@@ -5,5 +5,6 @@
 !examples/*.png
 *.png
 .coverage
+.python-version
 __pycache__
 htmlcov
