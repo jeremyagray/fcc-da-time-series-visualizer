@@ -10,7 +10,8 @@ class DataCleaningTestCase(unittest.TestCase):
         # This does not return the row count by itself.
         # actual = int(time_series_visualizer.df.count())
         # This returns the row count.
-        actual = int(time_series_visualizer.df.shape[0])
+        # actual = int(time_series_visualizer.df.shape[0])
+        actual = int(time_series_visualizer.df.count(numeric_only=True))
         expected = 1238
         self.assertEqual(
             actual, expected, "Expected DataFrame count after cleaning to be 1238."
