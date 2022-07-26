@@ -62,20 +62,22 @@ class BarPlotTestCase(unittest.TestCase):
         actual = []
         for label in self.ax.get_legend().get_texts():
             actual.append(label.get_text())
-            expected = [
-                "January",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July",
-                "August",
-                "September",
-                "October",
-                "November",
-                "December",
-            ]
+
+        expected = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+        ]
+
         self.assertEqual(
             actual,
             expected,
